@@ -25,7 +25,7 @@ steps:
   - 'kubernetes.yaml'
   env:
   - 'CLOUDSDK_COMPUTE_REGION=us-central1'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cloudbuild'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=mavcomplete'
 
 # Access the id_github file from Secret Manager, and setup SSH
 - name: 'gcr.io/cloud-builders/git'
@@ -62,7 +62,7 @@ steps:
     # Configure Git to create commits with Cloud Build's service account
     git config user.email $(gcloud auth list --filter=status:ACTIVE --format='value(account)') && \
 
-    git remote set-url origin git@github.com:MavComplete/hello-cloudbuild-env.git && \
+    git remote set-url origin git@github.com:MavComplete/env.git && \
 
     # Switch to the production branch and copy the kubernetes.yaml file from the candidate branch
     git fetch origin production && git checkout production && \
