@@ -74,7 +74,7 @@ steps:
 
 availableSecrets:
   secretManager:
-  - versionName: projects/heroic-cedar-370702/secrets/github-deploy/versions/latest
+  - versionName: projects/heroic-cedar-370702/secrets/github-prod/versions/latest
     env: 'SSH_KEY'
 
 # [END cloudbuild-delivery]
