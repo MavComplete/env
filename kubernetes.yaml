@@ -15,32 +15,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mavcomplete-build
+  name: hello-cloudbuild
   labels:
-    app: mavcomplete-build
+    app: hello-cloudbuild
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mavcomplete-build
+      app: hello-cloudbuild
   template:
     metadata:
       labels:
-        app: mavcomplete-build
+        app: hello-cloudbuild
     spec:
       containers:
-      - name: mavcomplete-build
-        image: us-central1-docker.pkg.dev/heroic-cedar-370702/my-repository/mavcomplete-build:887beae
+      - name: hello-cloudbuild
+        image: us-central1-docker.pkg.dev/heroic-cedar-370702/my-repository/hello-cloudbuild:f0fe9c6
         ports:
         - containerPort: 8080
 ---
 kind: Service
 apiVersion: v1
 metadata:
-  name: mavcomplete-build
+  name: hello-cloudbuild
 spec:
   selector:
-    app: mavcomplete-build
+    app: hello-cloudbuild
   ports:
   - protocol: TCP
     port: 80
