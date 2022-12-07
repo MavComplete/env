@@ -24,7 +24,7 @@ steps:
   - 'kubernetes.yaml'
   env:
   - 'CLOUDSDK_COMPUTE_REGION=us-central1'
-  - 'CLOUDSDK_CONTAINER_CLUSTER=hello-cloudbuild'
+  - 'CLOUDSDK_CONTAINER_CLUSTER=mavcomplete'
 
 # Access the id_github file from Secret Manager, and setup SSH
 - name: 'gcr.io/cloud-builders/git'
