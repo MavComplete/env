@@ -30,7 +30,7 @@ spec:
     spec:
       containers:
       - name: hello-cloudbuild
-        image: us-central1-docker.pkg.dev/heroic-cedar-370702/my-repository/hello-cloudbuild:e10a8fb
+        image: us-central1-docker.pkg.dev/heroic-cedar-370702/my-repository/hello-cloudbuild:b2167af
         ports:
         - containerPort: 8080
 ---
