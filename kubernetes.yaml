@@ -14,29 +14,11 @@ spec:
       labels:
         app: mavcomplete-build
     spec:
-<<<<<<< HEAD
-      containers:
-      - name: mavcomplete-build
-        image: us-central1-docker.pkg.dev/heroic-cedar-370702/my-repository/mavcomplete-build:a47a1b2
-        ports:
-        - containerPort: 8080
-=======
-      volumes:
-      - name: firestore-key-volume
-        secret:
-          secretName: firestore
       containers:
       - name: mavcomplete-build
         image: us-central1-docker.pkg.dev/heroic-cedar-370702/my-repository/mavcomplete-build:37f577a
         ports:
         - containerPort: 8080
-        volumeMounts:
-        - name: firestore-key-volume
-          mountPath: /var/secrets/google
-        env:
-        - name: GOOGLE_APPLICATION_CREDENTIALS
-          value: /var/secrets/google/heroic-cedar-370702-e5ded621956a.json
->>>>>>> a5030b42850da1057620767cc97cdf58b4f090e4
 ---
 kind: Service
 apiVersion: v1
